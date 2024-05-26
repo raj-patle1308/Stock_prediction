@@ -6,3 +6,4 @@ pandas_datareader==0.5.0
 numpy
 pandas
 scikit_learn
+streamlit
