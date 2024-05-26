@@ -1,11 +1,10 @@
+import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from utils import data_string_to_float, status_calc
 
-
 # The percentage by which a stock has to beat the S&P500 to be considered a 'buy'
 OUTPERFORMANCE = 10
-
 
 def build_data_set():
     """
@@ -28,7 +27,6 @@ def build_data_set():
 
     return X_train, y_train
 
-
 def predict_stocks():
     X_train, y_train = build_data_set()
     # Remove the random_state parameter to generate actual predictions
@@ -45,16 +43,16 @@ def predict_stocks():
     # Get the predicted tickers
     y_pred = clf.predict(X_test)
     if sum(y_pred) == 0:
-        print("No stocks predicted!")
+        st.write("No stocks predicted!")
     else:
         invest_list = z[y_pred].tolist()
-        print(
+        st.write(
             f"{len(invest_list)} stocks predicted to outperform the S&P500 by more than {OUTPERFORMANCE}%:"
         )
-        print(" ".join(invest_list))
+        st.write(" ".join(invest_list))
         return invest_list
 
-
 if __name__ == "__main__":
-    print("Building dataset and predicting stocks...")
+    st.title("Stock Prediction App")
+    st.write("Building dataset and predicting stocks...")
     predict_stocks()
