@@ -355,10 +355,6 @@ Altering the machine learning stuff is probably the easiest and most fun to do.
 
 Feel free to fork, play around, and submit PRs. I would be very grateful for any bug fixes or more unit tests.
 
-This project was originally based on Sentdex's excellent [machine learning tutorial](https://www.youtube.com/playlist?list=PLQVvvaa0QuDd0flgGphKCej-9jp-QdzZ3), but it has since evolved far beyond that and the code is almost completely different. The complete series is also on [his website](https://pythonprogramming.net/machine-learning-python-sklearn-intro/).
-
----
-
-For more content like this, check out my academic blog at [reasonabledeviations.com/](https://reasonabledeviations.com).
-#   S t o c k _ p r e d i c t i o n  
+#   S t o c k _ p r e d i c t i o n 
+ 
  
